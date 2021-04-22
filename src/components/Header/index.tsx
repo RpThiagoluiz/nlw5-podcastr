@@ -1,6 +1,6 @@
 import format from "date-fns/format";
 import ptBR from "date-fns/locale/pt-BR";
-
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 export const Header = () => {
@@ -12,7 +12,8 @@ export const Header = () => {
 
   return (
     <header className={styles.headerContainer}>
-      <img src="./logo.svg" alt="" />
+      <img src="/logo.svg" alt="" />
+
       <p>O melhor para voce ouvir, sempre</p>
       <span>{currentDate}</span>
     </header>
