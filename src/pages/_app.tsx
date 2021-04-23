@@ -3,16 +3,20 @@ import { Header } from "../components/Header";
 import { Player } from "../components/Player";
 
 import styles from "../styles/app.module.scss";
+import { PlayerProvider } from "../contexts/PlayerContext";
 
 function MyApp({ Component, pageProps }) {
+  //Shor sintaxe -> value={{ episodeList:episodeList, currentEpisodeIndex:currentEpisodeIndex}}
   return (
-    <div className={styles.appWrapper}>
-      <main>
-        <Header />
-        <Component {...pageProps} />
-      </main>
-      <Player />
-    </div>
+    <PlayerProvider>
+      <div className={styles.appWrapper}>
+        <main>
+          <Header />
+          <Component {...pageProps} />
+        </main>
+        <Player />
+      </div>
+    </PlayerProvider>
   );
 }
 
