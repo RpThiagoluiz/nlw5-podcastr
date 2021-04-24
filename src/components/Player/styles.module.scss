@@ -26,7 +26,7 @@
   footer {
     //Nao receber o align itens center, e sim o espaco todo
     align-self: stretch;
-    &.empty {
+    &.empty .progress {
       opacity: 0.5;
     }
   }
@@ -110,6 +110,7 @@
     &:disabled {
       cursor: default;
       //cursor:not-allow
+      opacity: 0.5;
     }
 
     //Button ta hover, e nao esta disabled ele faz isso
@@ -126,6 +127,14 @@
 
       &:hover:not(:disabled) {
         filter: brightness(0.95);
+      }
+    }
+
+    &.active {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+
+      &:hover {
+        filter: invert(0.6) invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
       }
     }
   }

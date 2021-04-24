@@ -6,7 +6,6 @@ import styles from "../styles/app.module.scss";
 import { PlayerProvider } from "../contexts/PlayerContext";
 
 function MyApp({ Component, pageProps }) {
-  //Shor sintaxe -> value={{ episodeList:episodeList, currentEpisodeIndex:currentEpisodeIndex}}
   return (
     <PlayerProvider>
       <div className={styles.appWrapper}>
